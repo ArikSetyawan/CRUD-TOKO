@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update cart</title>
+</head>
+<body>
+    <h1>update cart {{data.id_produk.nama_produk}}</h1>
+    <form action="/edit_cart/{{data.id}}" method="POST">
+        <input type="number" value="{{data.jumlah_barang}}" required name="jumlah_barang" placeholder="Jumlah Barang" min="1">
+        <button>UPDATE</button>
+    </form>
+</body>
+</html>

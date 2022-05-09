@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cart</title>
+</head>
+<body>
+	<h1>Ini Halaman Cart</h1>
+
+	<a href="/create_transaksi">Proses ke Transaksi</a>
+
+	<table border="1">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Nama Barang</th>
+				<th>Jumlah Beli</th>
+				<th>option</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for i in data %}
+			<tr>
+				<td>{{loop.index}}</td>
+				<td>{{i.id_produk.nama_produk}}</td>
+				<td>{{i.jumlah_barang}}</td>
+				<td><a href="/edit_cart/{{i.id}}">Edit</a> <a href="/delete_cart/{{i.id}}">Delete</a></td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk</title>
+</head>
+<body>
+    <h1>Ini list produk</h1>
+
+    <a href="/tambah_produk">Tambah Produk</a>
+    <br><br>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>nama</th>
+                <th>harga</th>
+                <th>stok</th>
+                <th>option</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+            <tr>
+                <td>{{loop.index}}</td>
+                <td>{{i.nama_produk}}</td>
+                <td>{{i.harga_produk}}</td>
+                <td>{{i.stok_produk}}</td>
+                <td><a href="/delete_produk/{{i.id}}">Delete</a> / <a href="/update_produk/{{i.id}}">Update</a> / <a href="/add_to_cart/{{i.id}}">add to cart</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- <h1>ini Cart</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>nama</th>
+                <th>jumlah</th>
+                <th>option</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(10) %}
+            <tr>
+                <td>{{loop.index}}</td>
+                <td>Susu ultramilk</td>
+                <td>2</td>
+                <td><a href="#">Delete</a> / <a href="#">Update</a> / <a href="#">add to cart</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table> -->
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update produk</title>
+</head>
+<body>
+    <h1>update produk</h1>
+    <form action="/update_produk/{{data.id}}" method="POST">
+        <input type="text" value="{{data.nama_produk}}" required name="nama_produk" placeholder="nama produk">
+        <input type="number" value="{{data.harga_produk}}" required name="harga_produk" placeholder="Harga">
+        <input type="number" value="{{data.stok_produk}}" required name="stok_produk" placeholder="Stok">
+        <button>UPDATE</button>
+    </form>
+</body>
+</html>

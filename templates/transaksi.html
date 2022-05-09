@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Transaksi</title>
+</head>
+<body>
+	<h1>Ini Halaman Transaksi</h1>
+
+	<!-- <a href="/create_transaksi">Proses ke Transaksi</a> -->
+
+	<table border="1">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>IDTRANSAKSI</th>
+				<th>waktutransaksi</th>
+				<th>Produk</th>
+				<th>TotalHarga</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for i in data %}
+			<tr>
+				<td>{{loop.index}}</td>
+				<td>{{i.id_transaksi}}</td>
+				<td>{{i.tanggal_transaksi}}</td>
+				<td>{{i.id_produk.nama_produk}}</td>
+				<td>{{i.total_harga}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+</body>
+</html>
